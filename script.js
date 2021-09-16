@@ -51,7 +51,6 @@ function sendEmail() {
 		Subject: sub,
 		Body: body
 	});
-	window.location.href = "https://sudipsahu17.github.io/sudipsahu.portfolio.github.io/index.html";
 	alert("Thanks for the message. Will reach out soon !!");
 }
 
