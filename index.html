@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudip Sahu - Portfolio : Application Developer</title>
+    <title>Sudip Sahu - Portfolio : Automation Developer</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -11,8 +11,10 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
 
-	<!-- jquery cdn link  -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+     <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+	
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </head>
 <body>
@@ -330,11 +332,11 @@ Highly motivated individual with proven leadership skills. Always indulged into 
 
     </div>
 
-    <form onsubmit="alert('Thanks for the message. Will reach out soon !!');">
+    <form method="post" onsubmit="sendEmail()">
 
         <input type="text" placeholder="Name" class="box" required="" name="name" id="name">
         <input type="email" placeholder="Email" class="box" required=""  name="email" id="email">
-        <input type="text" placeholder="Company/ Project" class="box"  name="desc" id="desc" required>
+        <input type="text" placeholder="Company/ Project" class="box"  name="com" id="com" required>
         <textarea cols="30" rows="10" class="box message" placeholder="Message"  name="msg" id="msg" required></textarea>
         <button class="btn" type="submit" name="submit"> Send <i class="fas fa-paper-plane"></i> </button>
 
