@@ -37,10 +37,22 @@ $(document).ready(function(){
   
 });
 
-//8ef6b0a5-93be-4111-b023-91aaa59d7707
-//Host : "smtp.elasticemail.com",
-//Username : "sudip.auto.mails@gmail.com",
-//Password : "5A79CFC7DF8BADC4DBF9F148D9BBD741DD93",
+function sendEmail() {
+	var name = document.getElementById("name").value.toUpperCase();
+	var email = document.getElementById("email").value;
+	var company = document.getElementById("com").value;
+	var msg = document.getElementById("msg").value;
+	var sub  = name + " - Mail from Portfolio Portal";
+	var body = "Name : " + name + "<br>Email ID : " + email + "<br>Company : " + company + "<br>Message : " + msg;
+	Email.send({
+		SecureToken : "8ef6b0a5-93be-4111-b023-91aaa59d7707",
+		To : "sudipsahu17@gmail.com",
+		From : "sudip.auto.mails@gmail.com",
+		Subject: sub,
+		Body: body
+	});
+	alert("Thanks for the message. Will reach out soon !!");
+}
 
 function openCity(evt, category) {
 	  // Declare all variables
